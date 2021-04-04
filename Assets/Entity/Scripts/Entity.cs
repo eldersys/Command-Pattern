@@ -53,15 +53,13 @@ namespace WoolySheep.Entity
             // This mess if only to debug for undoing multiple moves. It can be improved I suppose
             
             //--------------------------------------------------//
-            if (m_nBtnClicked != m_xB && m_xB>0)
-            {
-                m_nBtnClicked--;
-                m_xB--;
+            if (m_nBtnClicked == m_xB || !(m_xB > 0)) return;
+            m_nBtnClicked--;
+            m_xB--;
 
-                if (m_xB == 0)
-                    m_nBtnClicked = 0;
-            }
-            
+            if (m_xB == 0)
+                m_nBtnClicked = 0;
+
             //--------------------------------------------------//
         }
         
